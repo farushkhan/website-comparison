@@ -7,14 +7,14 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->library('diff');
 
-		$sourceDir = getcwd()."\\websites\\v1";
-		$destinationDir = getcwd()."\\websites\\v2";
+		$sourceDir = getcwd()."/websites/v1";
+		$destinationDir = getcwd()."/websites/v2";
 		$baseDir = "v2";		
 
 		$list['list_1'] = $this->findFilesRecursive($sourceDir, $destinationDir, $baseDir);
 
-		$sourceDir = getcwd()."\\websites\\v2";
-		$destinationDir = getcwd()."\\websites\\v1";
+		$sourceDir = getcwd()."/websites/v2";
+		$destinationDir = getcwd()."/websites/v1";
 		$baseDir = "v1";		
 
 		$list['list_2'] = $this->findFilesRecursive($sourceDir, $destinationDir, $baseDir);

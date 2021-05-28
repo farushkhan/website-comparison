@@ -40,7 +40,7 @@
   foreach($list_1 as $values){
     if($values['message'] == "New File"){
     ?>
-  <p><span class="s_no"><?php echo $s_no++; ?>. </span> <?php echo $values['file']; ?></p>
+  <p><span class="s_no"><?php echo $s_no++; ?>. </span> <?php echo str_replace('v2\\', '', $values['file']); ?></p>
   
   <?php 
 }
@@ -55,7 +55,7 @@
   foreach($list_2 as $values){
     if($values['message'] == "New File"){
     ?>
-  <p><span class="s_no"><?php echo $s_no++; ?>. </span><?php echo $values['file']; ?></p>
+  <p><span class="s_no"><?php echo $s_no++; ?>. </span><?php echo str_replace('v1\\', '', $values['file']); ?></p>
   
   <?php 
 }
@@ -70,7 +70,7 @@
   foreach($list_2 as $values){
     if($values['message'] == "Mis-Match"){
     ?>
-  <p><span class="s_no"><?php echo $s_no++; ?>. </span><?php echo $values['file']; ?></p>
+  <p><span class="s_no"><?php echo $s_no++; ?>. </span><?php echo str_replace('v1\\', '', $values['file']); ?></p>
   
   <?php 
 }
@@ -87,7 +87,7 @@
       $file = str_replace('v1', '', $values['file']);
       echo '<span class="s_no">'.$file.'</span>';
       echo '<br><div class="scroll">';
-     echo Diff::toTable(Diff::compareFiles(getcwd()."\\websites\\v1".$file, getcwd()."\\websites\\v2".$file));
+     echo Diff::toTable(Diff::compareFiles(getcwd()."/websites/v1".$file, getcwd()."/websites/v2".$file));
    echo '</div><br><br>';
     ?>  
   <?php 
@@ -99,7 +99,7 @@
 </div>
 
 <footer class="container-fluid text-center">
-  <p>Footer Text</p>
+  <p>Website Comparioson</p>
 </footer>
 
 </body>
