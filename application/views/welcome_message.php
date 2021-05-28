@@ -40,7 +40,7 @@
   foreach($list_1 as $values){
     if($values['message'] == "New File"){
     ?>
-  <p><span class="s_no"><?php echo $s_no++; ?>. </span> <?php echo str_replace('v2\\', '', $values['file']); ?></p>
+  <p><span class="s_no"><?php echo $s_no++; ?>. </span> <?php echo str_replace('v2/', '', $values['file']); ?></p>
   
   <?php 
 }
@@ -55,7 +55,7 @@
   foreach($list_2 as $values){
     if($values['message'] == "New File"){
     ?>
-  <p><span class="s_no"><?php echo $s_no++; ?>. </span><?php echo str_replace('v1\\', '', $values['file']); ?></p>
+  <p><span class="s_no"><?php echo $s_no++; ?>. </span><?php echo str_replace('v1/', '', $values['file']); ?></p>
   
   <?php 
 }
@@ -70,7 +70,7 @@
   foreach($list_2 as $values){
     if($values['message'] == "Mis-Match"){
     ?>
-  <p><span class="s_no"><?php echo $s_no++; ?>. </span><?php echo str_replace('v1\\', '', $values['file']); ?></p>
+  <p><span class="s_no"><?php echo $s_no++; ?>. </span><?php echo str_replace('v1/', '', $values['file']); ?></p>
   
   <?php 
 }
